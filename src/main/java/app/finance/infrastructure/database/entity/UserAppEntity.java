@@ -3,6 +3,7 @@ package app.finance.infrastructure.database.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+@With
 @Getter
 @Setter
 @EqualsAndHashCode(of = "email")
@@ -19,7 +20,7 @@ public class UserAppEntity {
     @Column(name = "user_app_id")
     private Integer userAppId;
 
-    @Column(name = "user_name")
+    @Column(name = "user_app_name")
     private String userName;
 
     @Column(name = "email")

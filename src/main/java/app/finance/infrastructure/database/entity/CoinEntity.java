@@ -24,12 +24,16 @@ public class CoinEntity {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "price")
-    private BigDecimal price;
+    @Column(name = "address_token_id")
+    private String addressTokenID;
 
     @Column(name = "quantity")
     private BigDecimal quantity;
 
     @Column(name = "value_in_fiat")
     private BigDecimal valueInFiat;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_app_id")
+    private UserAppEntity userAppEntity;
 }

@@ -29,4 +29,8 @@ public class StockEntity {
 
     @Column(name = "quantity")
     private BigDecimal quantity;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_app_id")
+    private UserAppEntity userAppEntity;
 }

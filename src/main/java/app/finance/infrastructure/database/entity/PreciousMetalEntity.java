@@ -29,4 +29,8 @@ public class PreciousMetalEntity {
 
     @Column(name = "quantity_in_ounce")
     private BigDecimal quantityInOunce;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_app_id")
+    private UserAppEntity userAppEntity;
 }
